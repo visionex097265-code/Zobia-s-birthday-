@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#160d2a">
+<title>A Surprise for Zobia 🎂</title>
+<style>
+:root{--pink:#ff9acb;--lav:#c8a7ff;--cream:#fff4fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--cream);background:radial-gradient(ellipse at 50% 0,#51256c 0,#24143d 38%,#100b20 100%);overflow-x:hidden}
+#stars{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.7;animation:twinkle 2.5s infinite alternate}@keyframes twinkle{to{opacity:.15;transform:scale(.5)}}
+main{position:relative;z-index:1;max-width:760px;margin:auto;padding:22px 16px 60px;text-align:center}
+.pill{display:inline-block;border:1px solid #ffffff38;background:#ffffff0c;border-radius:99px;padding:7px 14px;font-size:.8rem;letter-spacing:2px;color:#f4c9ff}
+h1{font-size:clamp(2.2rem,9vw,4.6rem);line-height:1.04;margin:18px 0 8px;background:linear-gradient(100deg,#fff,#ffb4d9,#d6b8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:#ead7f7;font-size:1.05rem;line-height:1.65}.cake{font-size:clamp(5rem,22vw,8rem);filter:drop-shadow(0 0 24px #ff85cf77);animation:bob 3s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-10px) rotate(2deg)}}
+button{font:inherit;border:0;border-radius:999px;padding:13px 21px;font-weight:750;cursor:pointer;color:#2b1438;background:linear-gradient(100deg,#ffb6d9,#d7baff);box-shadow:0 7px 25px #df8dff38;transition:transform .2s}button:active{transform:scale(.97)}button.secondary{background:#ffffff12;color:#fff;border:1px solid #ffffff30;box-shadow:none}
+#surprise{display:none;animation:appear .8s ease both}@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+section{margin:26px 0;padding:22px 18px;border:1px solid #ffffff20;border-radius:23px;background:linear-gradient(145deg,#ffffff12,#ffffff05);box-shadow:0 12px 45px #00000018}
+h2{color:#ffd1e9;margin:0 0 12px;font-size:1.45rem}.letter{font-size:1.02rem;line-height:1.9;color:#fff0fa;white-space:pre-line}
+.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.timebox{min-width:65px;padding:12px 9px;border-radius:14px;background:#ffffff12;border:1px solid #ffffff20}.timebox b{display:block;font-size:1.5rem;color:#ffd1e9}.timebox span{font-size:.7rem;color:#e5d3f2;letter-spacing:1px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{min-height:130px;display:flex;align-items:center;justify-content:center;border-radius:16px;background:linear-gradient(135deg,#ffb3d533,#c2a2ff33);border:1px dashed #ffffff60;color:#fbe6fa;overflow:hidden;position:relative}.photo img{width:100%;height:100%;min-height:130px;object-fit:cover;position:absolute;inset:0}.photo span{padding:10px}.photo input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+footer{font-size:.8rem;color:#cbb8dc;margin-top:25px}.hearts{position:fixed;bottom:-40px;z-index:5;pointer-events:none;animation:floatup 4s linear forwards}@keyframes floatup{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+.small{font-size:.82rem;color:#cbb8dc}
+@media(min-width:560px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body><div id="stars"></div>
+<main>
+  <div class="pill">A LITTLE SURPRISE FOR YOU ✨</div>
+  <div class="cake" aria-label="birthday cake">🎂</div>
+  <h1>Happy Birthday,<br>Zobia!</h1>
+  <p class="subtitle">Someone made a little corner of the internet<br>just to make you smile. 💗</p>
+  <button id="openBtn">Open your surprise 🎁</button>
+  <p class="small">Psst… tap the button for your birthday message.</p>
+  <div id="surprise">
+    <section>
+      <h2>🎉 Today is all about you 🎉</h2>
+      <p class="letter">Wishing you a day filled with laughter, little surprises, beautiful memories, and all the happiness you deserve. May this new year of your life bring you wonderful opportunities, peace, and countless reasons to smile. Keep being your lovely self, Zobia. Have the happiest birthday! 💖✨</p>
+      <p>🌷 🎀 🦋 💝 🦋 🎀 🌷</p>
+    </section>
+    <section>
+      <h2>💌 A little letter for you</h2>
+      <p class="letter">Dear Zobia,
+
+Happy Birthday! 🥳 I hope your day feels as special as the happiness you bring to the people around you. Thank you for being a wonderful friend. I wish you lots of smiles, good memories, success in everything you try, and people who always appreciate you.
+
+May every candle bring a new hope and every day ahead give you a reason to be happy. Enjoy your day to the fullest!
+
+With best wishes,
+Your friend 💗</p>
+    </section>
+    <section>
+      <h2>📸 Our memory corner</h2>
+      <p class="small">Optional: tap a tile to add a photo on this device before sharing your site.</p>
+      <div class="gallery">
+        <label class="photo"><span>📷 Memory 1<br><small>Tap to add photo</small></span><input type="file" accept="image/*" aria-label="Add photo 1" onchange="loadPhoto(this)"></label>
+        <label class="photo"><span>🌸 Memory 2<br><small>Tap to add photo</small></span><input type="file" accept="image/*" aria-label="Add photo 2" onchange="loadPhoto(this)"></label>
+        <label class="photo"><span>💫 Memory 3<br><small>Tap to add photo</small></span><input type="file" accept="image/*" aria-label="Add photo 3" onchange="loadPhoto(this)"></label>
+      </div>
+      <p class="small">Photos you choose here are only a local preview; to show them to Zobia, upload the photo files with the website.</p>
+    </section>
+    <section>
+      <h2>⏳ Birthday countdown</h2>
+      <p class="small">Set the birthday date to count down to the next celebration.</p>
+      <input id="birthdayDate" type="date" style="max-width:100%;padding:10px;border-radius:12px;border:1px solid #ffffff40;background:#26183b;color:white">
+      <div class="countdown" style="margin-top:15px">
+        <div class="timebox"><b id="days">—</b><span>DAYS</span></div><div class="timebox"><b id="hours">—</b><span>HOURS</span></div><div class="timebox"><b id="mins">—</b><span>MINUTES</span></div><div class="timebox"><b id="secs">—</b><span>SECONDS</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>🎵 A little music</h2>
+      <p class="small">Browsers usually require a tap before music can play. Add your own audio file before publishing if you want music.</p>
+      <label class="small">Choose audio file for local preview: <input type="file" accept="audio/*" id="audioFile"></label>
+      <div style="margin-top:14px"><button class="secondary" id="musicBtn">Play / Pause music ♫</button></div>
+      <audio id="audio" loop></audio>
+    </section>
+    <p style="font-size:1.5rem">Made with 💗 just for Zobia</p>
+    <button class="secondary" id="againBtn">See the surprise again ↻</button>
+  </div>
+  <footer>Birthday magic • Share kindness • Keep smiling ✨</footer>
+</main>
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<65;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';s.style.opacity=(.25+Math.random()*.65);stars.appendChild(s)}
+function burst(){for(let i=0;i<22;i++){const h=document.createElement('span');h.className='hearts';h.textContent=['💖','✨','💗','🎉','🌸'][Math.floor(Math.random()*5)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(16+Math.random()*20)+'px';h.style.animationDuration=(3+Math.random()*2)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),5200)}}
+document.getElementById('openBtn').addEventListener('click',()=>{document.getElementById('surprise').style.display='block';document.getElementById('openBtn').style.display='none';burst();document.getElementById('surprise').scrollIntoView({behavior:'smooth',block:'start'})});
+document.getElementById('againBtn').addEventListener('click',()=>{burst();window.scrollTo({top:0,behavior:'smooth'});document.getElementById('openBtn').style.display='inline-block';document.getElementById('surprise').style.display='none'});
+function loadPhoto(input){const label=input.parentElement;let img=label.querySelector('img');if(!img){img=document.createElement('img');label.appendChild(img)}if(input.files&&input.files[0]){img.src=URL.createObjectURL(input.files[0]);label.querySelector('span').style.display='none'}}
+const dateInput=document.getElementById('birthdayDate');dateInput.value='';function updateCountdown(){if(!dateInput.value){['days','hours','mins','secs'].forEach(id=>document.getElementById(id).textContent='—');return}const parts=dateInput.value.split('-').map(Number);const now=new Date();let target=new Date(parts[0],parts[1]-1,parts[2],0,0,0);if(target.getTime()<new Date(now.getFullYear(),now.getMonth(),now.getDate()).getTime())target=new Date(now.getFullYear()+1,parts[1]-1,parts[2],0,0,0);let d=Math.max(0,target-now.getTime());document.getElementById('days').textContent=Math.floor(d/86400000);document.getElementById('hours').textContent=Math.floor(d%86400000/3600000);document.getElementById('mins').textContent=Math.floor(d%3600000/60000);document.getElementById('secs').textContent=Math.floor(d%60000/1000)}
+dateInput.addEventListener('change',updateCountdown);setInterval(updateCountdown,1000);
+const audio=document.getElementById('audio'),audioFile=document.getElementById('audioFile');audioFile.addEventListener('change',()=>{if(audioFile.files[0]){audio.src=URL.createObjectURL(audioFile.files[0]);audio.load()}});document.getElementById('musicBtn').addEventListener('click',async()=>{if(!audio.src){alert('Choose an audio file first. Add that file to your published website too, so Zobia can hear it.');return}if(audio.paused){try{await audio.play()}catch(e){alert('Tap again to allow audio playback.')}}else audio.pause()});
+</script></body></html>
